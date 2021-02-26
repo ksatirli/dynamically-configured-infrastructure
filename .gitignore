@@ -1,0 +1,7 @@
+### generic ###
+*.log
+
+### Terraform ###
+**/.terraform/*
+*.tfstate
+*.tfstate.*

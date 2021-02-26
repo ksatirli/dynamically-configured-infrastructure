@@ -1,0 +1,33 @@
+---
+
+name: "Code Quality: Terraform"
+
+on:
+  pull_request:
+
+jobs:
+  terraform:
+    name: terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: "0.14.7"
+
+      - name: Run `terraform fmt`
+        run: terraform fmt -diff -check -no-color -recursive
+
+      - name: Run `terraform init` on `infrastructure`
+        run: terraform init -backend=false -get=true -get-plugins=true "./infrastructure/"
+
+      - name: Run `terraform init` on `repositories`
+        run: terraform init -backend=false -get=true -get-plugins=true "./repositories/"
+
+      - name: Run `terraform validate`
+        run: terraform validate -no-color
