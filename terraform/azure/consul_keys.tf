@@ -16,3 +16,12 @@ resource "consul_keys" "aks_cluster" {
     value = yamldecode(module.aks.kube_config_raw).clusters[0].name
   }
 }
+
+# see https://registry.terraform.io/providers/hashicorp/consul/latest/docs/resources/keys
+resource "consul_keys" "aks_resource_group" {
+  key {
+    # set AKS resource group name as value
+    path = "cluster-data/aks_resource_group"
+    value = azurerm_resource_group.platform.name
+  }
+}
