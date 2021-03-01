@@ -15,4 +15,15 @@ terraform {
       version = "2.11.0"
     }
   }
+
+  # see https://www.terraform.io/docs/language/settings/backends/remote.html
+  // TODO: enable
+  //  backend "remote" {
+  //    hostname = "app.terraform.io"
+  //    organization = "a-demo-organization"
+  //
+  //    workspaces {
+  //      name = "dynamic-infrastructure"
+  //    }
+  //  }
 }
