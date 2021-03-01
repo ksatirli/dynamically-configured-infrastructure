@@ -6,3 +6,4 @@
 *.tfstate
 *.tfstate.*
 **/private_ssh_key
+terraform.tfvars
