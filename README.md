@@ -30,6 +30,16 @@ While the authors of this repository take care to explain all workflows with the
 
 This section is a collection of links that will help you make the most of today's session.
 
+### Terraform
+
+* introduction to the Terraform Ecosystem: [speakerdeck.com/ksatirli/intro-to-the-terraform-ecosystem](https://speakerdeck.com/ksatirli/intro-to-the-terraform-ecosystem)
+* CLI commands [terraform.io/docs/commands/index.html](https://www.terraform.io/docs/commands/index.html)
+* variables and type constraints: [terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html#type-constraints)
+* variable definition files: [terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html#variable-definitions-tfvars-files)
+* information about Terraform State: [terraform.io/docs/state/index.html](https://www.terraform.io/docs/state/index.html)
+* in-depth guides on how to use Terraform: [learn.hashicorp.com/terraform](https://learn.hashicorp.com/terraform)
+* Terraform Code Quality: [speakerdeck.com/ksatirli/code-quality-for-terraform](https://speakerdeck.com/ksatirli/code-quality-for-terraform)
+
 ### Consul
 
 * CLI commands [consul.io/commands](https://www.consul.io/commands)
