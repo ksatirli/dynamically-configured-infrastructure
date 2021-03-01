@@ -16,6 +16,18 @@ variable "consul_datacenter" {
   default     = "dc1"
 }
 
+variable "app_name" {
+  type        = string
+  description = "Application name"
+  default     = "beacon"
+}
+
+variable "app_image" {
+  type        = string
+  description = "Application Image (incl. Tag)"
+  default     = "onlydole/beacon:main"
+}
+
 locals {
   portal_prefix = "https://portal.azure.com/#@azure.hashicorptest.com/resource"
   portal_suffix = "/overview"
