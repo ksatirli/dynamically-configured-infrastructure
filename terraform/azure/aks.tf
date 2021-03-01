@@ -14,6 +14,8 @@ module "aks" {
   prefix                          = var.project_name
   vnet_subnet_id                  = module.network.vnet_subnets[0]
 
+  tags = var.tags
+
   # see https://www.terraform.io/docs/language/meta-arguments/depends_on.html
   depends_on = [
     module.network

@@ -2,4 +2,6 @@
 resource "azurerm_resource_group" "platform" {
   name     = "platform"
   location = "westeurope"
+
+  tags = var.tags
 }

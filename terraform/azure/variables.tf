@@ -40,6 +40,15 @@ variable "region" {
   default     = "West Europe"
 }
 
+variable "tags" {
+  type        = map(string)
+  description = "Default Tags"
+  default = {
+    environment = "dev"
+    application = "platform"
+  }
+}
+
 variable "cluster_version" {
   type        = string
   description = "Kubernetes version to create cluster with"
