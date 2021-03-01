@@ -3,12 +3,12 @@ output "resource_group_link" {
   value       = "${local.portal_prefix}${azurerm_resource_group.platform.id}${local.portal_suffix}"
 }
 
-output "aks_link" {
+output "cluster_url" {
   description = "Kubernetes Service"
   value       = "${local.portal_prefix}${module.aks.aks_id}${local.portal_suffix}"
 }
 
-output "node_pools_link" {
+output "cluster_node_pools_url" {
   description = "Node Pools"
   value       = "${local.portal_prefix}${module.aks.aks_id}/nodePools"
 }

@@ -4,9 +4,10 @@ module "network" {
   version = "3.3.0"
 
   resource_group_name = azurerm_resource_group.platform.name
-  address_space       = "11.0.0.0/16"
-  subnet_prefixes     = ["11.0.1.0/24"]
-  subnet_names        = ["subnet1"]
+
+  address_space   = "11.0.0.0/16"
+  subnet_prefixes = ["11.0.1.0/24"]
+  subnet_names    = ["subnet1"]
 
   # see https://www.terraform.io/docs/language/meta-arguments/depends_on.html
   depends_on = [
