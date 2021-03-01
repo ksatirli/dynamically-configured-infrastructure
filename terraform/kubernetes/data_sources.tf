@@ -1,7 +1,14 @@
 # see https://registry.terraform.io/providers/hashicorp/consul/latest/docs/data-sources/keys
-data "consul_keys" "agent_count" {
+data "consul_keys" "remote" {
   key {
-    name = "aks_id"
-    path = "cluster-data/aks_id"
+    name = "aks_name"
+    path = "cluster-data/aks_name"
   }
+
+  key {
+    name = "aks_resource_group"
+    path = "cluster-data/aks_resource_group"
+  }
+}
+
 }
