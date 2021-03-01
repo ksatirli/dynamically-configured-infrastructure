@@ -36,7 +36,7 @@ This section is a collection of links that will help you make the most of today'
 
 ## Author Information
 
-This repository is maintained by [Kerim Satirli](https://github.com/ksatirli).
+This repository is maintained by [Kerim Satirli](https://github.com/ksatirli) and [Tom Harvey](https://github.com/tombuildsstuff).
 
 ## License
 
