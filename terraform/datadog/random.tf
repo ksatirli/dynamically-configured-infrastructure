@@ -1,5 +1,5 @@
 # see https://registry.terraform.io/providers/hashicorp/random/3.0.1
-provider "random" { }
+provider "random" {}
 
 #######################################################################################################################################
 #
