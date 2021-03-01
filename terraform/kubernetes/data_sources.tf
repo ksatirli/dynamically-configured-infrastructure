@@ -11,4 +11,13 @@ data "consul_keys" "remote" {
   }
 }
 
+# see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/kubernetes_cluster
+data "azurerm_kubernetes_cluster" "current" {
+  name                = data.consul_keys.remote.var.aks_name
+  resource_group_name = data.consul_keys.remote.var.aks_resource_group
+}
+
+locals {
+  # define a shorthand for better readability in `kubernetes.tf`
+  kube_config = data.azurerm_kubernetes_cluster.current.kube_config[0]
 }
