@@ -17,13 +17,6 @@ data "azurerm_kubernetes_cluster" "current" {
   resource_group_name = data.consul_keys.remote.var.aks_resource_group
 }
 
-# see https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/data-sources/namespace
-data "kubernetes_namespace" "beacon" {
-  metadata {
-    name = var.app_name
-  }
-}
-
 locals {
   # define a shorthand for better readability in `kubernetes.tf`
   kube_config = data.azurerm_kubernetes_cluster.current.kube_config[0]
