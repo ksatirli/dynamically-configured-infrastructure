@@ -1,7 +1,7 @@
 locals {
   aks_link_base = "${local.portal_prefix}${data.azurerm_kubernetes_cluster.current.id}"
-  app_host = kubernetes_service.beacon.status[0].load_balancer[0].ingress[0].ip
-  app_port = kubernetes_service.beacon.spec[0].port[0].port
+  app_host      = kubernetes_service.beacon.status[0].load_balancer[0].ingress[0].ip
+  app_port      = kubernetes_service.beacon.spec[0].port[0].port
 }
 
 output "cluster_url" {
