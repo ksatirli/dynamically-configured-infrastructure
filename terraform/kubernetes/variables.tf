@@ -16,12 +16,6 @@ variable "consul_datacenter" {
   default     = "dc1"
 }
 
-variable "region" {
-  type        = string
-  description = "Azure Region to create resource(s) in"
-  default     = "West Europe"
-}
-
 locals {
   portal_prefix = "https://portal.azure.com/#@azure.hashicorptest.com/resource"
   portal_suffix = "/overview"
