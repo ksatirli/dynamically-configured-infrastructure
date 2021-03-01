@@ -32,7 +32,8 @@ variable "datadog_app_key" {
   description = "Datadog Application Key"
 }
 
-locals {
-  portal_prefix = "https://portal.azure.com/#@azure.hashicorptest.com/resource"
-  portal_suffix = "/overview"
+variable "azuread_application_consent_desc" {
+  type        = string
+  description = "Consent Description"
+  default     = "Allow the application to access Datadog on behalf of the signed-in user."
 }

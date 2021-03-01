@@ -10,6 +10,6 @@ provider "random" { }
 
 # see https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password
 resource "random_password" "datadog" {
-  length  = 64
+  length  = 32
   special = true
 }
