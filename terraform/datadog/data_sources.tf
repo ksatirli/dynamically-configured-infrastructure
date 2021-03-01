@@ -11,6 +11,12 @@ data "consul_keys" "remote" {
   }
 }
 
+# see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config
+data "azurerm_client_config" "current" {}
+
+# see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subscription
+data "azurerm_subscription" "current" {}
+
 # see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/kubernetes_cluster
 data "azurerm_kubernetes_cluster" "current" {
   name                = data.consul_keys.remote.var.aks_name
