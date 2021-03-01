@@ -1,4 +1,4 @@
-output "resource_group_link" {
+output "resource_group_url" {
   description = "Resource Group"
   value       = "${local.portal_prefix}${azurerm_resource_group.platform.id}${local.portal_suffix}"
 }
