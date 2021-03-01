@@ -23,12 +23,12 @@ variable "app_name" {
 }
 
 variable "datadog_api_key" {
-  type = string
+  type        = string
   description = "Datadog API Key"
 }
 
 variable "datadog_app_key" {
-  type = string
+  type        = string
   description = "Datadog Application Key"
 }
 
