@@ -3,6 +3,12 @@ terraform {
   required_version = "0.14.7"
 
   required_providers {
+    # see https://registry.terraform.io/providers/hashicorp/azuread/1.4.0
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "1.4.0"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/azurerm/2.49.0
     azurerm = {
       source  = "hashicorp/azurerm"
