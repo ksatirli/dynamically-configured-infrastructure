@@ -1,9 +1,11 @@
+# see https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace
 resource "kubernetes_namespace" "beacon" {
   metadata {
     name = var.app_name
   }
 }
 
+# see https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/deployment
 resource "kubernetes_deployment" "beacon" {
   metadata {
     name      = var.app_name
@@ -39,9 +41,10 @@ resource "kubernetes_deployment" "beacon" {
   }
 }
 
+# see https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service
 resource "kubernetes_service" "beacon" {
   metadata {
-    name      = kubernetes_deployment.beacon.metadata.name
+    name      = kubernetes_deployment.beacon.metadata.0.name
     namespace = kubernetes_namespace.beacon.id
   }
 
