@@ -1,2 +1,3 @@
-datadog_api_key = "abc...890"
-datadog_app_key = "def...567"
+datadog_api_key        = "abc...890"
+datadog_app_key        = "def...567"
+azuread_application_id = "abc...890"

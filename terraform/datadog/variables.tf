@@ -32,6 +32,11 @@ variable "datadog_app_key" {
   description = "Datadog Application Key"
 }
 
+variable "azuread_application_id" {
+  type        = string
+  description = "AzureAD Application ID for Datadog application"
+}
+
 variable "azuread_application_consent_desc" {
   type        = string
   description = "Consent Description"
