@@ -26,6 +26,12 @@ terraform {
       source  = "hashicorp/helm"
       version = "2.0.2"
     }
+
+    # see https://registry.terraform.io/providers/hashicorp/random/3.1.0
+    random = {
+      source = "hashicorp/random"
+      version = "3.1.0"
+    }
   }
 
   //  # see https://www.terraform.io/docs/language/settings/backends/remote.html
