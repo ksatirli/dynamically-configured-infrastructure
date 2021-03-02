@@ -25,3 +25,14 @@ resource "consul_keys" "aks_resource_group" {
     value = azurerm_resource_group.platform.name
   }
 }
+
+# see https://registry.terraform.io/providers/hashicorp/consul/latest/docs/resources/keys
+resource "consul_keys" "aks_tags" {
+  key {
+    # set AKS resource tags as value
+    path  = "cluster-data/aks_tags"
+
+    # see https://www.terraform.io/docs/language/functions/jsonencode.html
+    value = jsonencode(var.tags)
+  }
+}
