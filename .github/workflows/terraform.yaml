@@ -13,7 +13,7 @@ jobs:
       matrix:
         directory: [
             "./terraform/azure",
-            "./terraform/kubernetes"
+            "./terraform/kubernetes",
             "./terraform/datadog"
         ]
     steps:
