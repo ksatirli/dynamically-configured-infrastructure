@@ -4,7 +4,7 @@ resource "datadog_synthetics_test" "beacon" {
 
   request_definition {
     method = "GET"
-    url    = "http://{local.app_host}:${local.app_port}"
+    url    = "http://${local.app_host}:${local.app_port}"
   }
 
   device_ids = ["tablet"]
@@ -14,7 +14,7 @@ resource "datadog_synthetics_test" "beacon" {
     tick_every = 3600
   }
 
-  name    = "A Browser test on {local.app_host}:${local.app_port}"
+  name    = "A Browser test on ${local.app_host}:${local.app_port}"
   message = "Notify @pagerduty-qa"
 
   status = "live"
