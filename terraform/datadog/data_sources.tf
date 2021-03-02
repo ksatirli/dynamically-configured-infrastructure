@@ -9,6 +9,11 @@ data "consul_keys" "remote" {
     name = "aks_resource_group"
     path = "cluster-data/aks_resource_group"
   }
+
+  key {
+    name = "aks_tags"
+    path = "cluster-data/aks_tags"
+  }
 }
 
 # see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config
