@@ -14,6 +14,11 @@ data "consul_keys" "remote" {
     name = "aks_tags"
     path = "cluster-data/aks_tags"
   }
+
+  key {
+    name = "datadog_thresholds"
+    path = "datadog/thresholds"
+  }
 }
 
 # assemble host filters for Datadog
