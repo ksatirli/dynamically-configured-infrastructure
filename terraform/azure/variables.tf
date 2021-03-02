@@ -37,14 +37,14 @@ variable "project_name" {
 variable "region" {
   type        = string
   description = "Azure Region to create resource(s) in"
-  default     = "West Europe"
+  default     = "westeurope"
 }
 
 variable "tags" {
   type        = map(string)
   description = "Default Tags"
   default = {
-    environment = "dev"
+    environment = "testing"
     application = "platform"
   }
 }
