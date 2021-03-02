@@ -16,6 +16,13 @@ data "consul_keys" "remote" {
   }
 }
 
+# assemble host filters for Datadog
+locals {
+  host_filter_tag_app = jsondecode(data.consul_keys.remote.var.aks_tags).application
+  host_filter_tag_env = jsondecode(data.consul_keys.remote.var.aks_tags).environment
+  host_filters        = "environment:${local.host_filter_tag_env},app:${local.host_filter_tag_app}"
+}
+
 # see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config
 data "azurerm_client_config" "current" {}
 
