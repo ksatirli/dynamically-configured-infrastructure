@@ -30,7 +30,7 @@ resource "consul_keys" "aks_resource_group" {
 resource "consul_keys" "aks_tags" {
   key {
     # set AKS resource tags as value
-    path  = "cluster-data/aks_tags"
+    path = "cluster-data/aks_tags"
 
     # see https://www.terraform.io/docs/language/functions/jsonencode.html
     value = jsonencode(var.tags)

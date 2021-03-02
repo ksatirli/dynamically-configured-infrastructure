@@ -57,3 +57,8 @@ locals {
   app_host = data.kubernetes_service.beacon.status[0].load_balancer[0].ingress[0].ip
   app_port = data.kubernetes_service.beacon.spec[0].port[0].port
 }
+
+output "beacon_url" {
+  description = "Beacon"
+  value       = "http://${local.app_host}:${local.app_port}"
+}
