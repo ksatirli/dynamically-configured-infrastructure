@@ -21,3 +21,8 @@ output "synthetics" {
   description = "Synthetics"
   value       = "${local.datadog_base}/synthetics/details/${datadog_synthetics_test.beacon.id}"
 }
+
+output "beacon_url" {
+  description = "Beacon"
+  value       = "http://${local.app_host}:${local.app_port}"
+}

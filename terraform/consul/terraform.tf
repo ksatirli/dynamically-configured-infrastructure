@@ -15,6 +15,7 @@ terraform {
       version = "2.11.0"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/hcs/0.2.0
     hcs = {
       source  = "hashicorp/hcs"
       version = "0.2.0"
