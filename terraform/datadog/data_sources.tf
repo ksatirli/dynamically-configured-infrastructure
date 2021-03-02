@@ -44,3 +44,16 @@ locals {
   # define a shorthand for better readability in `kubernetes.tf`
   kube_config = data.azurerm_kubernetes_cluster.current.kube_config[0]
 }
+
+# see https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/data-sources/service
+data "kubernetes_service" "beacon" {
+  metadata {
+    name      = "beacon"
+    namespace = "beacon"
+  }
+}
+
+locals {
+  app_host = data.kubernetes_service.beacon.status[0].load_balancer[0].ingress[0].ip
+  app_port = data.kubernetes_service.beacon.spec[0].port[0].port
+}
