@@ -1,6 +1,6 @@
 # Dynamically Configured Infrastructure
 
-> Dynamically configured infrastructure with Terraform, Consul and Microsoft Azure
+> Dynamically configured infrastructure with Terraform, Consul, and Microsoft Azure
 
 ## Table of Contents
 
