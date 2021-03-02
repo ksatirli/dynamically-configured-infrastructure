@@ -1,4 +1,4 @@
-# this container will be reachable via `consul.container.shipyard.run`
+# this container will be reachable via `shipyard.container.shipyard.run`
 container "consul" {
   network {
     name = "network.demos"

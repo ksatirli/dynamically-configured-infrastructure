@@ -1,4 +1,4 @@
-# this container will be reachable via `consul.docs.shipyard.run`
+# this container will be reachable via `shipyard.docs.shipyard.run`
 docs "consul" {
   depends_on = [
     "container.consul",
