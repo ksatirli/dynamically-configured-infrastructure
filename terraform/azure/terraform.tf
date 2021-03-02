@@ -15,4 +15,15 @@ terraform {
       version = "2.11.0"
     }
   }
+
+  //  # see https://www.terraform.io/docs/language/settings/backends/remote.html
+  //  backend "remote" {
+  //    hostname     = "app.terraform.io"
+  //    organization = "a-demo-organization"
+  //
+  //    # see https://www.terraform.io/docs/language/settings/backends/remote.html#workspaces
+  //    workspaces {
+  //      name = "dci-azure"
+  //    }
+  //  }
 }
