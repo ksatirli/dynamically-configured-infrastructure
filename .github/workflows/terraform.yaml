@@ -13,8 +13,9 @@ jobs:
       matrix:
         directory: [
             "./terraform/azure",
-            "./terraform/kubernetes",
-            "./terraform/datadog"
+            "./terraform/consul",
+            "./terraform/datadog",
+            "./terraform/kubernetes"
         ]
     steps:
       - name: Checkout Repository
