@@ -19,6 +19,7 @@ resource "datadog_synthetics_test" "beacon" {
   ]
 
   options_list {
+    tick_every = 300
   }
 
   name    = "A Browser test on ${local.app_host}:${local.app_port}"
