@@ -3,8 +3,9 @@ resource "helm_release" "datadog_agent" {
   name = "datadog-agent"
 
   # see https://github.com/DataDog/helm-charts/tree/master/charts/datadog
-  chart             = "datadog/datadog"
-  version           = "2.9.5"
+  chart   = "datadog/datadog"
+  version = "2.9.11"
+
   dependency_update = true
   force_update      = true
 

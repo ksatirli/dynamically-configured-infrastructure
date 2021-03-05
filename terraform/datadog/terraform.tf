@@ -9,16 +9,16 @@ terraform {
       version = "1.4.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/azurerm/2.49.0
+    # see https://registry.terraform.io/providers/hashicorp/azurerm/2.50.0
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "2.49.0"
+      version = "2.50.0"
     }
 
-    # see https://registry.terraform.io/providers/DataDog/datadog/2.21.0
+    # see https://registry.terraform.io/providers/DataDog/datadog/2.22.0
     datadog = {
       source  = "DataDog/datadog"
-      version = "2.21.0"
+      version = "2.22.0"
     }
 
     # see https://registry.terraform.io/providers/hashicorp/helm/2.0.2
@@ -27,6 +27,7 @@ terraform {
       version = "2.0.2"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/kubernetes/2.0.2
     kubernetes = {
       source  = "hashicorp/kubernetes"
       version = "2.0.2"
