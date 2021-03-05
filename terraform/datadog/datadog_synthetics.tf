@@ -7,15 +7,23 @@ resource "datadog_synthetics_test" "beacon" {
     url    = "http://${local.app_host}:${local.app_port}"
   }
 
-  device_ids = ["tablet"]
-  locations  = ["aws:eu-central-1"]
+  device_ids = [
+    "laptop_large",
+    "tablet"
+  ]
+
+  locations = [
+    "aws:eu-central-1",
+    "aws:eu-west-1",
+    "aws:eu-west-2"
+  ]
 
   options_list {
-    tick_every = 3600
   }
 
   name    = "A Browser test on ${local.app_host}:${local.app_port}"
   message = "Notify @pagerduty-qa"
+  message = "Notify @phrawzty"
 
   status = "live"
 }
