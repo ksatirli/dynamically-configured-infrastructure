@@ -23,7 +23,6 @@ resource "datadog_synthetics_test" "beacon" {
   }
 
   name    = "A Browser test on ${local.app_host}:${local.app_port}"
-  message = "Notify @pagerduty-qa"
   message = "Notify @phrawzty"
 
   status = "live"
