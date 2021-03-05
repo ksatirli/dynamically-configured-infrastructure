@@ -12,19 +12,19 @@ variable "consul_datacenter" {
 
 variable "project_name" {
   type        = string
-  description = "Project name (used globally)"
-  default     = "dynamic-infrastructure"
+  description = "Project name prefix"
+  default     = "platform"
 
   validation {
     # check the length of the string and ensure it does not contain spaces
     # see https://www.terraform.io/docs/language/values/variables.html#custom-validation-rules
     condition = (
       length(var.project_name) > 4 &&
-      length(var.project_name) < 32 &&
+      length(var.project_name) < 20 &&
       replace(var.project_name, " ", "") == var.project_name
     )
 
-    error_message = "The project_name must be between 4 and 32 characters and may not contain spaces."
+    error_message = "The project_name must be between 4 and 20 characters and may not contain spaces."
   }
 }
 
@@ -50,6 +50,7 @@ variable "cluster_version" {
 }
 
 locals {
+  project_name  = "${var.project_name}-${random_pet.operator.id}"
   portal_prefix = "https://portal.azure.com/#@azure.hashicorptest.com/resource"
   portal_suffix = "/overview"
 }

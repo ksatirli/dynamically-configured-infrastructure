@@ -14,6 +14,12 @@ terraform {
       source  = "hashicorp/consul"
       version = "2.11.0"
     }
+
+    # see https://registry.terraform.io/providers/hashicorp/random/latest
+    random = {
+      source  = "hashicorp/random"
+      version = "3.1.0"
+    }
   }
 
   //  # see https://www.terraform.io/docs/language/settings/backends/remote.html

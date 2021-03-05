@@ -11,7 +11,7 @@ module "aks" {
   kubernetes_version              = var.cluster_version
   orchestrator_version            = var.cluster_version
   os_disk_size_gb                 = 100
-  prefix                          = var.project_name
+  prefix                          = local.project_name
   vnet_subnet_id                  = module.network.vnet_subnets[0]
 
   tags = var.tags
