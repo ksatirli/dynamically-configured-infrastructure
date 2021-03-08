@@ -9,6 +9,12 @@ terraform {
       version = "2.50.0"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/consul/2.11.0
+    consul = {
+      source  = "hashicorp/consul"
+      version = "2.11.0"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/kubernetes/2.0.2
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -16,14 +22,14 @@ terraform {
     }
   }
 
-  //  # see https://www.terraform.io/docs/language/settings/backends/remote.html
-  //  backend "remote" {
-  //    hostname     = "app.terraform.io"
-  //    organization = "a-demo-organization"
-  //
-  //    # see https://www.terraform.io/docs/language/settings/backends/remote.html#workspaces
-  //    workspaces {
-  //      name = "dci-kubernetes"
-  //    }
-  //  }
+  # see https://www.terraform.io/docs/language/settings/backends/remote.html
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "a-demo-organization"
+
+    # see https://www.terraform.io/docs/language/settings/backends/remote.html#workspaces
+    workspaces {
+      name = "dci-kubernetes"
+    }
+  }
 }
