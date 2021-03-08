@@ -15,6 +15,12 @@ terraform {
       version = "2.50.0"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/consul/2.11.0
+    consul = {
+      source  = "hashicorp/consul"
+      version = "2.11.0"
+    }
+
     # see https://registry.terraform.io/providers/DataDog/datadog/2.22.0
     datadog = {
       source  = "DataDog/datadog"
