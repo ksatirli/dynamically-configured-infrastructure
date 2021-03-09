@@ -1,5 +1,10 @@
+output "resource_group_name" {
+  description = "Resource Group Name"
+  value       = azurerm_resource_group.platform.name
+}
+
 output "resource_group_url" {
-  description = "Resource Group"
+  description = "Resource Group URL"
   value       = "${local.portal_prefix}${azurerm_resource_group.platform.id}${local.portal_suffix}"
 }
 
