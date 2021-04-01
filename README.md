@@ -22,6 +22,8 @@ To use the code in this repository, you will need the following applications:
 
 * [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.7` (or later)
 * [HashiCorp Consul](https://www.consul.io/downloads) `1.9.3` (or later)
+* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.9` (or later)
+* [HashiCorp Consul](https://www.consul.io/downloads) `1.9.4` (or later)
 * Azure CLI [az](https://docs.microsoft.com/en-us/cli/azure/) `2.0.0` (or later)
 
 ## Additional Reading
