@@ -32,7 +32,7 @@ The code in this repository is split out into a handful of distinct flows, each 
 
 * `terraform/azure` contains code for Terraform to set up an Azure Resource Group and generate a Packer variables definition file
 * `terraform/kubernetes` contains code for Terraform to start a Linux Virtual Machine with the Packer image
-* `consul` contains a Shipyard blueprint for running a pre-configured Consul server
+* `shipyard/consul` contains a Shipyard blueprint for running a pre-configured Consul server
 
 Each directory contains its own `README.md` with information relevant to the workflow.
 
