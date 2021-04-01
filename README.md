@@ -15,6 +15,7 @@
 
 ## Important Links
 
+* Slides: [speakerdeck.com/ksatirli/dynamically-configured-infrastructure](https://speakerdeck.com/ksatirli/dynamically-configured-infrastructure)
 * Code: [github.com/ksatirli/dynamically-configured-infrastructure](https://github.com/ksatirli/dynamically-configured-infrastructure)
 
 ## Requirements
