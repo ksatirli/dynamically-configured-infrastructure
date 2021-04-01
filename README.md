@@ -8,21 +8,33 @@
   - [Table of Contents](#table-of-contents)
   - [Important Links](#important-links)
   - [Requirements](#requirements)
+  - [Workflows](#workflows)
   - [Additional Reading](#additional-reading)
   - [Author Information](#author-information)
   - [License](#license)
 
 ## Important Links
 
+* Slides: [speakerdeck.com/ksatirli/dynamically-configured-infrastructure](https://speakerdeck.com/ksatirli/dynamically-configured-infrastructure)
 * Code: [github.com/ksatirli/dynamically-configured-infrastructure](https://github.com/ksatirli/dynamically-configured-infrastructure)
 
 ## Requirements
 
 To use the code in this repository, you will need the following applications:
 
-* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.7` (or later)
-* [HashiCorp Consul](https://www.consul.io/downloads) `1.9.3` (or later)
+* [HashiCorp Terraform](https://www.terraform.io/downloads.html) `0.14.9` (or later)
+* [HashiCorp Consul](https://www.consul.io/downloads) `1.9.4` (or later)
 * Azure CLI [az](https://docs.microsoft.com/en-us/cli/azure/) `2.0.0` (or later)
+
+## Workflows
+
+The code in this repository is split out into a handful of distinct flows, each in their own directory:
+
+* `terraform/azure` contains code for Terraform to set up an Azure Resource Group and generate a Packer variables definition file
+* `terraform/kubernetes` contains code for Terraform to start a Linux Virtual Machine with the Packer image
+* `shipyard/consul` contains a Shipyard blueprint for running a pre-configured Consul server
+
+Each directory contains its own `README.md` with information relevant to the workflow.
 
 ## Additional Reading
 
